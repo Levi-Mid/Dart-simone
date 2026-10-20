@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routerConfig: appRouter,
+      // permite arrastar o carrossel com o mouse (necessário no Chrome)
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {PointerDeviceKind.touch, PointerDeviceKind.mouse},
       ),

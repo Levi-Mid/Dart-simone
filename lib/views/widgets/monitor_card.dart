@@ -19,9 +19,14 @@ class MonitorCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 60,
-                backgroundImage: NetworkImage(monitor.foto),
+              ClipOval(
+                child: Image.network(
+                  monitor.foto,
+                  width: 120,
+                  height: 120,
+                  fit: BoxFit.cover,
+                  webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
+                ),
               ),
               const SizedBox(height: 16),
               Text(

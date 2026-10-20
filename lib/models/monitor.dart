@@ -6,7 +6,12 @@ class Monitor {
   final String foto;
   final List<Horario> horarios;
 
-  Monitor(this.id, this.nome, this.foto, this.horarios);
+  Monitor({
+    required this.id,
+    required this.nome,
+    required this.foto,
+    required this.horarios,
+  });
 
   factory Monitor.fromJson(Map<String, dynamic> json) {
     List<Horario> horarios = [];
@@ -14,10 +19,15 @@ class Monitor {
     Map<String, dynamic> dias = json['horarios'];
     dias.forEach((dia, lista) {
       for (var texto in lista) {
-        horarios.add(Horario(dia, texto));
+        horarios.add(Horario(dia: dia, horario: texto));
       }
     });
 
-    return Monitor(json['id'], json['nome'], json['foto'], horarios);
+    return Monitor(
+      id: json['id'],
+      nome: json['nome'],
+      foto: json['foto'],
+      horarios: horarios,
+    );
   }
 }

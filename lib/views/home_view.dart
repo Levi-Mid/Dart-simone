@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'widgets/monitor_carrossel.dart';
+import 'package:go_router/go_router.dart';
 
 import '../viewmodels/monitor_viewmodel.dart';
 
@@ -34,7 +35,10 @@ class HomeView extends StatelessWidget {
         key: ValueKey(vm.diaSelecionado),
         monitores: vm.monitoresFiltrados,
         aoTocar: (monitor) {
-          // na próxima etapa: abrir a tela de detalhes
+          context.push('/detalhes', extra: {
+            'monitor': monitor,
+            'dia': vm.diaSelecionado,
+          });
         },
       );
     }
