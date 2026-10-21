@@ -17,6 +17,7 @@ class MonitorViewModel extends ChangeNotifier {
     'quarta',
     'quinta',
     'sexta',
+    'sabado',
     'todos',
   ];
 
