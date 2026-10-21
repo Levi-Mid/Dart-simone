@@ -20,14 +20,12 @@ class DetalhesView extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(height: 24),
-          ClipOval(
-            child: Image.network(
-              monitor.foto,
-              width: 120,
-              height: 120,
-              fit: BoxFit.cover,
-              webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
-            ),
+          Image.network(
+            monitor.foto,
+            width: 120,
+            height: 120,
+            fit: BoxFit.cover,
+            webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
           ),
           const SizedBox(height: 16),
           Text(

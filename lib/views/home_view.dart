@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
           Icon(Icons.menu, size: 64),
           SizedBox(height: 16),
           Text(
-            'Selecione um dia no menu',
+            'Selecione um dia',
             style: TextStyle(fontSize: 18),
           ),
           SizedBox(height: 8),

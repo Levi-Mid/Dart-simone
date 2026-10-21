@@ -13,7 +13,7 @@ class MonitorCarrossel extends StatelessWidget {
     required this.aoTocar,
   });
 
-  final PageController controller = PageController(viewportFraction: 0.8);
+  final PageController controller = PageController(viewportFraction: 0.85);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MonitorCarrossel extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          height: 300,
+          height: 180,
           child: PageView.builder(
             controller: controller,
             itemCount: monitores.length,
@@ -38,7 +38,7 @@ class MonitorCarrossel extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        const Text('Arraste para o lado para ver mais'),
+        const Text('Arraste para o lado'),
       ],
     );
   }

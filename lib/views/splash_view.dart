@@ -25,24 +25,29 @@ class _SplashViewState extends State<SplashView> {
     });
   }
 
-  @override
+    @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.school, size: 80),
-            SizedBox(height: 16),
-            Text(
+            Image.asset(
+              'assets/logo.png',
+              width: 150,
+              height: 150,
+            ),
+            const SizedBox(height: 16),
+            const Text(
               'Monitores DCOMP',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 24),
-            CircularProgressIndicator(),
+            const SizedBox(height: 24),
+            const CircularProgressIndicator(),
           ],
         ),
       ),
     );
   }
+  
 }
